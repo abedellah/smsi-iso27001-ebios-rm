@@ -733,13 +733,19 @@ def main():
         return 1 if perimes else 0
     OUT_MD.mkdir(parents=True, exist_ok=True)
     OUT_XLSX.parent.mkdir(parents=True, exist_ok=True)
+    def ecrire(chemin, texte):
+        """Ne réécrit un fichier que si son contenu change, pour ne pas le marquer comme modifié à chaque exécution."""
+        if chemin.is_file() and chemin.read_text(encoding="utf-8") == texte:
+            return False
+        chemin.write_text(texte, encoding="utf-8", newline="\n")
+        return True
+
     for n, t in docs.items():
-        (OUT_MD / n).write_text(t, encoding="utf-8", newline="\n")
-        print("écrit docs/tableaux/" + n)
+        print(("écrit " if ecrire(OUT_MD / n, t) else "inchangé ") + "docs/tableaux/" + n)
     pr, nouveau = readme_avec_bloc(et, soa)
-    pr.write_text(nouveau, encoding="utf-8", newline="\n")
+    ecrire(pr, nouveau)
     excel(et, soa)
-    print("écrit reports/" + OUT_XLSX.name)
+    print("classeur reports/" + OUT_XLSX.name)
     print("OK : données cohérentes")
     return 0
 
