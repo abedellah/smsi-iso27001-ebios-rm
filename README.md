@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg?v=2" alt="SMSI ISO 27001 + EBIOS RM, bâti sur le cas de référence de l'ANSSI" width="100%">
+</p>
+
 # SMSI ISO/IEC 27001 et analyse de risques EBIOS RM sur le cas de référence de l'ANSSI
 
 > **D'où vient l'entreprise.** Ce projet part du cas d'exemple **fictif** (une société de biotechnologie fabriquant des vaccins) publié
