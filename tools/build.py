@@ -606,6 +606,22 @@ def formule_niveau(cell, et):
     return "=" + expr
 
 
+def contenu(wb):
+    # une chaîne vide est relue comme une cellule vide : on les traite pareil
+    return {ws.title: [[None if c.value == "" else c.value for c in row] for row in ws.iter_rows()] for ws in wb.worksheets}
+
+
+def ecrire_si_different(wb, chemin):
+    """Un classeur Excel n'est jamais identique octet pour octet (dates internes) : on ne le réécrit que si son contenu change,
+    pour que Git ne signale pas de modification à chaque exécution."""
+    if chemin.exists():
+        from openpyxl import load_workbook
+        if contenu(load_workbook(chemin)) == contenu(wb):
+            return False
+    wb.save(chemin)
+    return True
+
+
 def excel(et: Etude, soa):
     wb = Workbook()
     gras, fond = Font(bold=True), PatternFill("solid", fgColor="D9E1F2")
@@ -686,7 +702,7 @@ def excel(et: Etude, soa):
     feuille("Indicateurs", ["Réf.", "Indicateur", "Formule", "Situation de départ", "Cible", "Fréquence", "Responsable", "Lien"],
             [[i["id"], i["nom"], i["formule"], i.get("depart", ""), i["cible"], i["frequence"], i["responsable"], i.get("lien", "")] for i in et.indicateurs],
             {"B": 50, "C": 60, "D": 30, "E": 30})
-    wb.save(OUT_XLSX)
+    ecrire_si_different(wb, OUT_XLSX)
 
 
 def main():

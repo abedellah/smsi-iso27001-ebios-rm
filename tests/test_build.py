@@ -216,3 +216,12 @@ def test_chaque_bloc_mermaid_est_bien_forme():
         assert texte.count("```") % 2 == 0, f"{md.name} : bloc de code non fermé"
         for bloc in re.findall(r"```mermaid\n(.*?)```", texte, re.S):
             assert bloc.count("subgraph ") == len(re.findall(r"^\s*end\s*$", bloc, re.M)), md.name
+
+
+def test_classeur_non_reecrit_si_contenu_identique(et, tmp_path, monkeypatch):
+    sortie = tmp_path / "classeur.xlsx"
+    monkeypatch.setattr(build, "OUT_XLSX", sortie)
+    build.excel(et, et.soa())
+    avant = sortie.read_bytes()
+    build.excel(et, et.soa())
+    assert sortie.read_bytes() == avant
