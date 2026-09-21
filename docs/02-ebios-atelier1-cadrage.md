@@ -1,6 +1,6 @@
 # EBIOS RM, atelier 1 : cadrage et socle de sécurité
 
-*Brouillon. Étiquettes : `[ANSSI p. N]` repris du guide, `[Original]` travail de ce projet,
+*Étiquettes : `[ANSSI p. N]` repris du guide, `[Original]` travail de ce projet,
 `[Hypothèse]` choix à discuter. Voir [`CREDITS.md`](../CREDITS.md).*
 
 ## 1. Cadre de l'étude
@@ -85,10 +85,14 @@ peut aussi être traité dans le cadre d'un SMSI `[ANSSI p. 29, 31]`. C'est le c
 |---|---|---|---|
 | Guide d'hygiène informatique de l'ANSSI | Appliqué avec restrictions | Règle 8 (identifier nommément chaque personne qui accède au système) : un compte administrateur non nominatif existe pour l'ERP. Règle 37 (politique de sauvegarde des composants critiques) | L'ERP est une solution propriétaire qui n'admet pas d'autre compte d'administration ; la politique de sauvegarde est en cours de rédaction par un groupe de travail |
 
-**Travail à faire** `[Original]` : évaluer l'ensemble du socle en s'appuyant sur le Guide d'hygiène
-informatique de l'ANSSI et sur l'Annexe A de l'ISO 27001, en partant du niveau de maturité faible du
-cas. L'état d'application de chaque règle sera une hypothèse cohérente avec ce niveau, et sera
-présenté comme telle. Ce travail alimente directement la déclaration d'applicabilité.
+**Évaluation complète du socle** `[Original]`. Les 42 règles du guide d'hygiène sont évaluées au niveau standard :
+[`tableaux/socle.md`](tableaux/socle.md). Une seule règle est appliquée sans restriction (la 39, un référent en sécurité existe), 19 le
+sont avec restrictions et 22 ne le sont pas. Pour chaque règle, l'état vient du guide EBIOS RM quand celui-ci en dit quelque chose
+(pages citées dans la colonne Source) et sinon d'une hypothèse cohérente avec la maturité faible du cas `[Hypothèse]`. Chaque règle est
+rapprochée de mesures de l'Annexe A de l'ISO 27001 et de la mesure du plan qui la traite.
 
-Le guide indique aussi qu'en cas d'écarts trop importants, on peut concentrer l'effort sur le socle
-avant de poursuivre `[ANSSI p. 31]`. Ce choix sera discuté une fois le socle évalué.
+Le guide indique qu'en cas d'écarts trop importants, on peut concentrer l'effort sur le socle avant de poursuivre `[ANSSI p. 31]`.
+Ici, l'écart est très important. La décision retenue est de **poursuivre l'étude en considérant la non-conformité** : les scénarios
+de risque exploitent les faiblesses du socle pour en évaluer la gravité, et les écarts alimentent les scénarios opérationnels de
+l'[atelier 4](05-ebios-atelier4-scenarios-operationnels.md). Les mesures du socle font partie du [plan de traitement](tableaux/plan-traitement.md),
+comme le guide le demande `[ANSSI p. 30]`.

@@ -1,6 +1,6 @@
 # Contexte et périmètre du SMSI (ISO/IEC 27001, clause 4)
 
-*Brouillon. Étiquettes : `[ANSSI p. N]` repris du guide, `[Original]` travail de ce projet,
+*Étiquettes : `[ANSSI p. N]` repris du guide, `[Original]` travail de ce projet,
 `[Hypothèse]` choix à discuter. Voir [`CREDITS.md`](../CREDITS.md).*
 
 ## 1. L'organisme
@@ -20,7 +20,7 @@ Ce point de départ compte pour l'ISO 27001 : le SMSI est à **construire**, pas
 | Recherche concurrentielle intense sur un vaccin en cours de finalisation | Externe | `[ANSSI p. 40]` |
 | Activisme lié à la vaccination et aux tests sur animaux | Externe | `[ANSSI p. 37, 40]` |
 | Dépendance à des prestataires et laboratoires dont la sécurité échappe à l'entreprise | Externe | `[ANSSI p. 46, 54]` |
-| Rançongiciels visant les industriels | Externe | `[ANSSI p. 40]` (le guide écarte cette menace, voir les constats) |
+| Rançongiciels visant les industriels | Externe | `[ANSSI p. 40]` (le guide écarte cette menace, voir le [constat 1](15-constats-sur-le-cas-de-reference.md)) |
 | Cadre réglementaire pharmaceutique et sanitaire (qualité, libération des lots) | Externe | `[Hypothèse]` à préciser avec les textes applicables |
 | Protection des données personnelles (salariés, essais cliniques) | Externe | `[Hypothèse]` RGPD, à cadrer |
 
