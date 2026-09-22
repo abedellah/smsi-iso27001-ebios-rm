@@ -43,6 +43,18 @@ cette règle est **vérifiée automatiquement**.
 Voir aussi le [registre des risques](docs/tableaux/registre-risques.md) (cartographies avant et après traitement) et la
 [trajectoire du risque](docs/tableaux/trajectoire-et-budget.md).
 
+## Livrables
+
+Les trois documents de synthèse, dans `reports/` :
+
+- **[Étude EBIOS Risk Manager](reports/Etude-EBIOS-RM.docx)** (Word) — les cinq ateliers, résumés : l'essentiel de chaque atelier et les
+  résultats marquants (le cloisonnement du réseau, l'ajout du scénario rançongiciel, la décision sur R3).
+- **[Gouvernance du SMSI](reports/Gouvernance-du-SMSI.docx)** (Word) — politique de sécurité, programme d'audit interne, revue de direction.
+- **[Classeur Excel](reports/SMSI-biotech-classeur.xlsx)** — le registre des risques et la déclaration d'applicabilité, avec de vraies
+  formules (scores et niveaux calculés, pas figés).
+
+Les documents Markdown ci-dessous vont plus loin : chaque affirmation y porte sa source (page du guide, ou travail original).
+
 ## Les documents
 
 ### Couche ISO/IEC 27001 (le cadre)
