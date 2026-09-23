@@ -50,8 +50,10 @@ Les trois documents de synthèse, dans `reports/` :
 - **[Étude EBIOS Risk Manager](reports/Etude-EBIOS-RM.docx)** (Word) — les cinq ateliers, résumés : l'essentiel de chaque atelier et les
   résultats marquants (le cloisonnement du réseau, l'ajout du scénario rançongiciel, la décision sur R3).
 - **[Gouvernance du SMSI](reports/Gouvernance-du-SMSI.docx)** (Word) — politique de sécurité, programme d'audit interne, revue de direction.
-- **[Classeur Excel](reports/SMSI-biotech-classeur.xlsx)** — le registre des risques et la déclaration d'applicabilité, avec de vraies
-  formules (scores et niveaux calculés, pas figés).
+- **[Classeur Excel](reports/SMSI-biotech-classeur.xlsx)** — le registre des risques, la déclaration d'applicabilité et la trajectoire
+  du risque sur 18 mois, avec de vraies formules (scores et niveaux calculés, pas figés).
+- **[Diaporama de restitution](reports/Restitution-SMSI.pptx)** (PowerPoint, 8 diapositives) — la synthèse pour une direction :
+  chiffres clés, cartographie des risques, SoA, budget, limites à annoncer, décisions demandées.
 
 Les documents Markdown ci-dessous vont plus loin : chaque affirmation y porte sa source (page du guide, ou travail original).
 
